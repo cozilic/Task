@@ -15,29 +15,37 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call(UsersTableSeeder::class);
         $user = new App\User();
-        $user->name = 'Patrik Forsberg';
-        $user->username = '85088';
-        $user->user_level = '1';
+        $user->name = 'Andreas Emanuelsson';
+        $user->username = '80354';
+        $user->user_level = '3';
         $user->district = '7423';
         $user->password = Hash::make('secret');
         $user->save();
 
-        $user = new App\User();
-        $user->name = 'Tomas Palm';
-        $user->username = '80542';
-        $user->user_level = '1';
-        $user->district = '7423';
-        $user->password = Hash::make('secret');
-        $user->save();
+//        $user = new App\User();
+//        $user->name = 'Patrik Forsberg';
+//        $user->username = '85088';
+//        $user->user_level = '0';
+//        $user->district = '7423';
+//        $user->password = Hash::make('secret');
+//        $user->save();
+//
+//        $user = new App\User();
+//        $user->name = 'Tomas Palm';
+//        $user->username = '80542';
+//        $user->user_level = '1';
+//        $user->district = '7423';
+//        $user->password = Hash::make('secret');
+//        $user->save();
+//
+//        $district = new App\District();
+//        $district->name = 'Umeå';
+//        $district->number = '7423';
+//        $district->save();
 
-        $district = new App\District();
-        $district->name = 'Umeå';
-        $district->number = '7423';
-        $district->save();
 
 
-
-        factory(App\Task::class, 10)->create();
+//        factory(App\Task::class, 10)->create();
     }
 
 

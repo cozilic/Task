@@ -88,8 +88,27 @@
                                 <option value="{{$district->number}}">{{$district->name}}</option>
                                 @endforeach
                                 </select>
+                                <a id="more" href="#" onclick="$('.district_show').slideToggle(function(){$('#more').html($('.district_show').is(':visible')?'Hide':'+ Add District');});">+ Add District</a>
+
                           </div>
-                        </div>
+                          <div class="district_show col-10" style="display:none">
+
+                                <div class="form-group row">
+                                        <label for="user_district_number" class="col-3 col-form-label">District Number:</label>
+                                        <div class="col-5">
+                                        <input type="text" class="form-control here" placeholder="Ex. 7423" name="user_district_number">
+                                        </div>
+                                      </div>
+
+                                      <div class="form-group row">
+                                            <label for="user_district_name" class="col-3 col-form-label">District Name</label>
+                                            <div class="col-5">
+                                            <input type="text" class="form-control here" placeholder="Ex. Umeå" name="user_district_name">
+                                            </div>
+                                          </div>
+                              </div>
+                                </div>
+
 
                         <div class="form-group row">
                           <label for="level" class="col-3 col-form-label">Employee Level</label>

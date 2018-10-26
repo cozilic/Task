@@ -25,6 +25,7 @@
                             {{ $loop->first ? '' : ',' }}
                                 {{$viewed_by->user->name}}
                             @endforeach
+                            @else
                         @endif
                     @if (Auth::user()->user_level >= '1')
                     @if ($task->status !== 'completed')
