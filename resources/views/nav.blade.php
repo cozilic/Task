@@ -41,10 +41,10 @@
             @endtable
         </div>
         <div class="tab-pane fade" id="create" role="tabpanel" aria-labelledby="create-tab">
-                <form action="">
+                <form action="/task/store" Method="post">
                         @csrf
-                        @method('POST')
-
+                        <input type="hidden" name="task_user_id" value="{{Auth::user()->id}}">
+                        <input type="hidden" name="task_district" value="{{Auth::user()->district}}">
                         <div class="form-group row">
                           <label for="text" class="col-12 col-form-label">Enter Title here</label>
                           <div class="col-12">
@@ -54,10 +54,15 @@
                         <div class="form-group row">
                           <label for="textarea" class="col-12 col-form-label">Description</label>
                           <div class="col-12">
-                            <textarea id="textarea" name="task_textarea" cols="40" rows="5" class="form-control"></textarea>
+                            <textarea id="textarea" name="task_text" cols="40" rows="5" class="form-control"></textarea>
                           </div>
                         </div>
-                      </form>
+                        <div class="form-group row">
+                                <div class="col-12">
+                                  <button class="btn btn-primary" type="submit">Create Task</button>
+                                </div>
+                              </div>
+                            </form>
         </div>
 
         <div class="tab-pane fade" id="add_user" role="tabpanel" aria-labelledby="add_user-tab"><br />

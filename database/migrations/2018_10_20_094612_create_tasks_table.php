@@ -19,7 +19,7 @@ class CreateTasksTable extends Migration
             $table->text('title');
             $table->longtext('text');
             $table->string('comment')->nullable();
-            $table->string('status');
+            $table->string('status')->default('pending');
             $table->string('district');
             $table->string('category')->nullable();
             $table->text('viewed_by')->nullable();

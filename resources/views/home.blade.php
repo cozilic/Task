@@ -17,9 +17,22 @@
               </button>
 
       </div>
-
 @endif
-                    @include('nav')
+@if (session('info') !== null)
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+        <h4 class="alert-heading">Task Created!</h4>
+        <p>You have created a new task with id number: <b>{{session('info')}}</b></p>
+        <hr>
+        Keep a lookout for an answer.
+        <p class="mb-0"></p>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+
+      </div>
+@endif
+
+@include('nav')
 
                 </div>
             </div>
